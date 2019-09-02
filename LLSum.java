@@ -1,6 +1,3 @@
-import java.awt.*;
-import java.sql.SQLOutput;
-
 public class LLSum {
     public static void main(String[] args) {
         ListNode l1 = null;

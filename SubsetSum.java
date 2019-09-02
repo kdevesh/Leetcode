@@ -1,4 +1,3 @@
-import java.io.*;
 import java.util.*;
 public class SubsetSum {
     public String findSum(int sum,int [] input)

@@ -1,7 +1,5 @@
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.LinkedList;
 
 public class PrisonCellAfterNDays {
     public int[] prisonAfterNDays(int[] cells, int N) {
@@ -23,6 +21,8 @@ public class PrisonCellAfterNDays {
 
     public static void main(String[] args) {
     PrisonCellAfterNDays obj = new PrisonCellAfterNDays();
-        Arrays.stream(obj.prisonAfterNDays(new int[]{1,0,0,1,0,0,0,1}, 826)).forEach(val-> System.out.print(val+" "));
+        for (int val : obj.prisonAfterNDays(new int[]{1, 0, 0, 1, 0, 0, 0, 1}, 826)) {
+            System.out.print(val + " ");
+        }
     }
 }

@@ -7,7 +7,7 @@ public class MaxSubArr {
     public static void main(String[] args) throws Exception{
         BufferedReader dd = new BufferedReader(new InputStreamReader(System.in));
         int n = Integer.parseInt(dd.readLine());
-        int arr[] = new int[n];
+        int []arr = new int[n];
         int maxSum=0,maxsofar=0;
         LinkedList<ArrayList<Integer>> result = new LinkedList<>();
         ArrayList<Integer> temp=new ArrayList<>();
@@ -31,7 +31,7 @@ public class MaxSubArr {
         }
         if(maxSum<=maxsofar)
             result.add(temp);
-        result.forEach(x->{x.forEach(y-> System.out.print(y));
+        result.forEach(x->{x.forEach(System.out::print);
             System.out.println();});
     }
 }

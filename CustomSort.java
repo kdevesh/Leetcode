@@ -1,4 +1,7 @@
 import java.util.Arrays;
+import java.util.Optional;
+import java.util.OptionalInt;
+import java.util.function.Consumer;
 
 public class CustomSort {
     public String[] reorderLogFiles(String[] logs) {
@@ -20,6 +23,6 @@ public class CustomSort {
 
     public static void main(String[] args) {
         CustomSort obj = new CustomSort();
-        Arrays.stream(obj.reorderLogFiles(new String[]{"a1 9 2 3 1", "g1 act car", "zo4 4 7", "ab1 off key dog", "a8 act zoo"})).forEach(val-> System.out.println(val));
+        Arrays.stream(obj.reorderLogFiles(new String[]{"a1 9 2 3 1", "g1 act car", "zo4 4 7", "ab1 off key dog", "a8 act zoo"})).forEach(System.out::println);
     }
 }
