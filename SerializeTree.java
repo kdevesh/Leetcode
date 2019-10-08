@@ -1,13 +1,4 @@
-import java.sql.SQLOutput;
 import java.util.*;
-class TreeNode{
-    TreeNode left;
-    TreeNode right;
-    int val;
-    TreeNode(int val){
-        this.val = val;
-    }
-}
 public class SerializeTree {
 
     // Encodes a tree to a single string.
