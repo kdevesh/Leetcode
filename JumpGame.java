@@ -1,4 +1,4 @@
-class Solution {
+class Solution3 {
     public boolean canJump(int[] nums) {
         int dp [] = new int[nums.length];
         if(nums.length>1&&nums[0]==0)

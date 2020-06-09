@@ -2,7 +2,7 @@ public class LLSum {
     public static void main(String[] args) {
         ListNode l1 = null;
         ListNode l2 = null;
-        Solution obj = new Solution();
+        Solution2 obj = new Solution2();
         l1 = obj.insertNode(l1,1);
         l1 = obj.insertNode(l1,2);
         l1 = obj.insertNode(l1,3);
@@ -31,7 +31,7 @@ class ListNode{
         val = x;
     }
 }
-class Solution {
+class Solution2 {
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
         ListNode head=null;
         int carry = 0,rem = 0;
