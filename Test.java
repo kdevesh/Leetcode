@@ -5,6 +5,7 @@ class Counter{
         synchronized (this){
             this.counter+=1;
             System.out.println(this.counter);
+            System.out.println(Thread.currentThread().getName());
         }
     }
 }

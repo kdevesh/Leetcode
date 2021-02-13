@@ -13,7 +13,7 @@
 import java.util.*;
 
 public class NodesKDistance {
-    private Map<Integer, TreeNode> map = new HashMap<>();
+    private Map<Integer, TreeNode> parentMap = new HashMap<>();
     private Map<Integer, Boolean> visited = new HashMap<>();
 
     private List<Integer> distanceK(TreeNode root, TreeNode target, int K) {
@@ -35,10 +35,10 @@ public class NodesKDistance {
                     queue.add(node.right);
                     visited.put(node.right.val, true);
                 }
-                if (map.get(node.val) != null) {
-                    if (!visited.get(map.get(node.val).val)) {
-                        queue.add(map.get(node.val));
-                        visited.put(map.get(node.val).val, true);
+                if (parentMap.get(node.val) != null) {
+                    if (!visited.get(parentMap.get(node.val).val)) {
+                        queue.add(parentMap.get(node.val));
+                        visited.put(parentMap.get(node.val).val, true);
                     }
                 }
                 size--;
@@ -55,7 +55,7 @@ public class NodesKDistance {
         if (root == null)
             return;
         else {
-            map.put(root.val, parent);
+            parentMap.put(root.val, parent);
             visited.put(root.val, false);
             fillParent(root.left, root);
             fillParent(root.right, root);
@@ -71,5 +71,6 @@ public class NodesKDistance {
         root.left.right.left = new TreeNode(7);
         root.left.right.right = new TreeNode(4);
         System.out.println(new NodesKDistance().distanceK(root, root.left, 2));
+
     }
 }
