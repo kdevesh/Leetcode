@@ -13,8 +13,8 @@
 import java.util.*;
 
 public class NodesKDistance {
-    private Map<Integer, TreeNode> parentMap = new HashMap<>();
-    private Map<Integer, Boolean> visited = new HashMap<>();
+    private final Map<Integer, TreeNode> parentMap = new HashMap<>();
+    private final Map<Integer, Boolean> visited = new HashMap<>();
 
     private List<Integer> distanceK(TreeNode root, TreeNode target, int K) {
         List<Integer> res = new LinkedList<>();
